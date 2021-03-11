@@ -1,5 +1,11 @@
 #nod
 def nod(arg1, arg2) -> int:
+	if arg1 == 0 and arg2 == 0:
+		return("Infinity")
+	elif arg1 == 0 and arg2 != 0:
+		return(arg2)
+	elif arg2 == 0:
+		return(arg1)
 	if type(arg1) != type(int()) or type(arg2) != type(int()): #проверка на входящие аргументы , чтобы они имели тип int, иначе ошибка
 		raise ValueError("Value Error")                      #фактический вызов ошибки Value Error
 	a1, b1, factor, s, myltiply = max(arg1, arg2), min(arg1, arg2), 2, [], 1
@@ -34,6 +40,12 @@ def nok(arg1, arg2) ->int:
 
 #nodGauss
 def nodGauss(arg1, arg2) -> int: #нахождение НОД по методу Гаусса a1 = q* a2 + remains; a2 = q1* remains + remains1 ...
+	if arg1 == 0 and arg2 == 0:
+		return("Infinity")
+	elif arg1 == 0 and arg2 != 0:
+		return(arg2)
+	elif arg2 == 0:
+		return(arg1)
 	if type(arg1) != type(int()) or type(arg2) != type(int()): #проверка на входящие аргументы , чтобы они имели тип int, иначе ошибка
 		raise ValueError("Value Error")                      #фактический вызов ошибки Value Error
 	a1, a2, remains = max(arg1, arg2), min(arg1, arg2), 1 
@@ -48,3 +60,5 @@ if __name__ == '__main__':
 	print(nok(10, 13))
 	print(nod(1604, 56))
 	print(nodGauss(22,11))
+	print(nod(56, 0))
+	print(nodGauss(22,0))
