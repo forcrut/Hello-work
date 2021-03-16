@@ -48,7 +48,7 @@ def nok(arg1, arg2) ->int:
 
 
 #nodGauss
-def nodEvklid(arg1, arg2) -> int: #нахождение НОД по методу Гаусса a1 = q* a2 + remains; a2 = q1* remains + remains1 ...
+def nodEvklid(arg1, arg2) -> int: #нахождение НОД по методу Евклид a1 = q* a2 + remains; a2 = q1* remains + remains1 ...
 	if arg1 == 0 and arg2 == 0:
 		return("Infinity")
 	elif arg1 == 0 and arg2 != 0:
